@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
-        <AssemblySearchPaths>$(AssemblySearchPaths);$(GDWeavePath)/core</AssemblySearchPaths>
+		<AssemblySearchPaths>$(GDWeavePath)/core</AssemblySearchPaths>
     </PropertyGroup>
 
     <ItemGroup>
-        <Reference Include="GDWeave" Private="false"/>
+		<Reference Include="GDWeave" Private="false">
+			<HintPath>$(GDWeavePath)/GDWeave.dll(</HintPath>
+		</Reference>
         <Reference Include="Serilog" Private="false"/>
     </ItemGroup>
 
